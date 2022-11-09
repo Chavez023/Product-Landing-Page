@@ -6,115 +6,53 @@
     box-sizing: border-box;
 }
 
-html {
+html,body {
+    height: 100%;
     font-family: inter;
+    
 }
-
+.main {
+    position: relative;
+ }
 
 header {
-
-}
-section{
-    height: 100%;
-    margin-bottom: 5vh;
-}
-section:nth-child(2) {
-    height: 5vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-section:nth-child(3) {}
-.container {
-    height: 100%;
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row wrap;
-    gap:3vh;
-}
-
-.card {
-    background-color: white;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    height: 55vh;
-    width: 40vh;
-    border-radius: 25px;
-
-    position: relative;
-    transition: .2s;
-
-}
-
-.card-bg {
-    border-radius: 25px 25px 0 0;
-    background:linear-gradient(135deg, rgb(18, 138, 2), rgb(0, 153, 82));
-    height: 50%;
-    width: 100%;
-
-    position: absolute;
-}
-
-.card-info {
-    height: 50%;
-    width: 100%;
-    border-radius: 0 0 25px 25px;
-
-    position: absolute;
-    bottom: 0;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column wrap;
-}
-
-.card-icon-set{
-    height:100%;
-    width: 100%;
-
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column wrap;
-}
-
-#card-icon {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(238, 238, 238);
     height: 10vh;
-    width: 10vh;
-    border-radius: 20vh;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.377);
+    width: 100%;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-flow: column wrap;
 
-    font-size: 4vh;
-
-}
-
-button {
-    height: 5vh;
-    width: 25vh;
-    padding: 1vh;
-    margin-top: 2vh;
-
-    border-radius: 25px;
-    border:none;
-
-}
-
-.card:hover {
-    transform: scale(103%) translatey(-30px);
-    transition: .3s;
+    position: fixed;
 }
 
 
+.logo {
+    height: 100%;
+}
+
+#header-img {
+    height: 100%;
+    
+}
+
+nav ul{
+    list-style: none;
+}
+nav li {
+    display: inline-block;
+
+    padding: 2vh;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+ section{
+    height: 100%;
+ }
 
 
+ 
