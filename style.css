@@ -1,3 +1,63 @@
+html,
+body  {
+  height: 100%;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+header {
+  background-color: rgb(54, 54, 54);
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+#logo {
+  height: 100%;
+}
+#header-img {
+  height: 100%;
+}
+nav {
+  text-align: end;
+  width: 40%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 5%;
+}
+main {
+  height: 100%;
+}
+
+
+section {
+  height: 100%;
+}
+
+section
+
+section:nth-child(5) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+
+}
+.products {
+  background-color: #333333;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
 .card {
   border: green 1px solid;
   height: 500px;
@@ -6,16 +66,13 @@
 
   position: relative;
 }
-
 .card-other {
   background-color: transparent;
   height: 500px;
   width: 350px;
 
   position: absolute;
-  
 }
-
 #side-l1 {
   background-color: green;
   height: 150px;
@@ -100,9 +157,8 @@
   bottom: 185px;
   right: -5px;
 }
-
 #side-arrow-top {
-  background-color: aqua;
+  background-color: green;
   height: 30px;
   width: 30px;
   clip-path: polygon(
@@ -114,14 +170,26 @@
   top: 0;
   right: 0;
 }
-
-
-
+#side-arrow-bot {
+  background-color: green;
+  height: 30px;
+  width: 30px;
+  clip-path: polygon(
+    0 0,
+    100% 100%,
+    0% 100%
+  );
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
 .card-shade {
-  background-color: red;
+  border: 1px solid #189505;
+  background: linear-gradient(135deg, rgba(1,1,1,0.71) 0%, rgba(0,0,0,0.36) 100%);
+  background-blend-mode: normal;
+  backdrop-filter: blur(50px);
   height: 480px;
   width: 330px;
-
   clip-path: polygon(
     0 0,
     300px 0px,
@@ -129,10 +197,28 @@
     330px 480px,
     30px 480px,
     0 450px
-
   );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+
+  color: white;
 
   position: absolute;
   top: 10px;
   left: 10px;
+  
+}
+.card-shade button {
+  width: 50%;
+  height: 8%;
+}
+
+
+
+@media (max-width: 1500px) {
+  .products {
+    overflow-y: scroll ;
+  }
 }
