@@ -1,8 +1,10 @@
 html,
 body  {
+  background-color: rgb(49, 49, 49);
   height: 100%;
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
 }
 header {
   background-color: rgb(54, 54, 54);
@@ -41,9 +43,21 @@ section {
   height: 100%;
 }
 
-section
+section:nth-child(1) {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+section:nth-child(2) {
+  height: 30%;
+  height:fit-content;
+  text-align: center;
+}
 
-section:nth-child(5) {
+section:nth-child(3) {
+  background-color: #189505;
   display: flex;
   justify-content: center;
   align-items: center;
