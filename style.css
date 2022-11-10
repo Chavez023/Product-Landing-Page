@@ -1,58 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+.card {
+  border: green 1px solid;
+  height: 500px;
+  width: 350px;
+  margin: 50px;
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  position: relative;
 }
 
-html,body {
-    height: 100%;
-    font-family: inter;
-    
-}
-.main {
-    position: relative;
- }
+.card-other {
+  background-color: transparent;
+  height: 500px;
+  width: 350px;
 
-header {
-    background-color: rgb(238, 238, 238);
-    height: 10vh;
-    width: 100%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    position: fixed;
+  position: absolute;
+  
 }
 
-
-.logo {
-    height: 100%;
+#side-l1 {
+  background-color: green;
+  height: 150px;
+  width: 10px;
+  clip-path: polygon(
+    0 0,
+    10px 0,
+    10px 150px,
+    0 140px
+  );
+  position: absolute;
+  top: 5px;
+  left: -5px;
+}
+#side-l2 {
+  background-color: green;
+  height: 30px;
+  width: 10px;
+  clip-path: polygon(
+    0 0,
+    10px 10px,
+    10px 30px,
+    0 20px
+  );
+  position: absolute;
+  top: 155px;
+  left: -5px;
+}
+#side-l3 {
+  background-color: green;
+  height: 30px;
+  width: 10px;
+  clip-path: polygon(
+    0 0,
+    10px 10px,
+    10px 30px,
+    0 20px
+  );
+  position: absolute;
+  top: 185px;
+  left: -5px;
+}
+#side-r1 {
+  background-color: green;
+  height: 150px;
+  width: 10px;
+  clip-path: polygon(
+    0 0,
+    10px  10px,
+    10px 150px,
+    0 150px
+  );
+  position: absolute;
+  bottom: 5px;
+  right: -5px;
+}
+#side-r2 {
+  background-color: green;
+  height: 30px;
+  width: 10px;
+  clip-path: polygon(
+    0 0,
+    10px 10px,
+    10px 30px,
+    0 20px
+  );
+  position: absolute;
+  bottom: 155px;
+  right: -5px;
+}
+#side-r3 {
+  background-color: green;
+  height: 30px;
+  width: 10px;
+  clip-path: polygon(
+    0 0,
+    10px 10px,
+    10px 30px,
+    0 20px
+  );
+  position: absolute;
+  bottom: 185px;
+  right: -5px;
 }
 
-#header-img {
-    height: 100%;
-    
+#side-arrow-top {
+  background-color: aqua;
+  height: 30px;
+  width: 30px;
+  clip-path: polygon(
+    0 0,
+    100% 0%,
+    100% 100%
+  );
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
-nav ul{
-    list-style: none;
+
+
+.card-shade {
+  background-color: red;
+  height: 480px;
+  width: 330px;
+
+  clip-path: polygon(
+    0 0,
+    300px 0px,
+    330px 30px,
+    330px 480px,
+    30px 480px,
+    0 450px
+
+  );
+
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
-nav li {
-    display: inline-block;
-
-    padding: 2vh;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
- section{
-    height: 100%;
- }
-
-
- 
