@@ -1,10 +1,28 @@
-html,
-body  {
-  background-color: rgb(49, 49, 49);
-  height: 100%;
+
+* {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
   color: white;
+  font-family: sans-serif;
+}
+
+:root {
+  --xbox: green;
+  --ps:blue;
+  --stadia: orange;
+}
+
+html, body {
+  background-color: black;
+}
+
+
+section {
+  height: 100%;
+  padding: 5%;
 }
 header {
   background-color: rgb(54, 54, 54);
@@ -43,37 +61,161 @@ section {
   height: 100%;
 }
 
-section:nth-child(1) {
+section:nth-child(2) {
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column wrap;
 }
-section:nth-child(2) {
-  height: 30%;
-  height:fit-content;
-  text-align: center;
-}
-
 section:nth-child(3) {
-  background-color: #189505;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column wrap;
-
-}
-.products {
-  background-color: #333333;
-  height: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
 }
+
+iframe {
+  height: 30vh;
+  width: 25vw;
+}
+.border:nth-child(1) {
+  padding: 2vh;
+  margin: 3px;
+  border: 2px solid var(--xbox);
+}
+.border:nth-child(2) {
+  margin: 3px;
+  padding: 2vh;
+  border: 2px solid var(--ps);
+}
+.border:nth-child(3) {
+  margin: 3px;
+  padding: 2vh;
+  border: 2px solid var(--stadia);
+}
+section:nth-child(4) {
+  height: fit-content;
+}
+
+.product-category {
+  margin: auto;
+  height: 5vh;
+  width: fit-content;
+  position: relative;
+  display: flex;
+
+}
+
+.product-category a {
+
+  line-height: 5vh;
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  text-align: center;
+
+}
+.indicator {
+  position: absolute;
+  height: 5px;
+  bottom:0;
+  z-index: 0;
+  background-color: brown;
+  transition: 1s ;
+  clip-path: polygon(
+    0 0,
+    95% 0,
+    100% 100%,
+    5% 100%
+  );
+
+}
+
+a:nth-child(1) {
+  width: 100px;
+}
+a:nth-child(2) {
+  width: 120px;
+}
+a:nth-child(3) {
+  width: 100px;
+}
+
+nav.start-xbox, a:nth-child(1):hover~.indicator {
+  width: 100px;
+  left: 0;
+  background-color: var(--xbox);
+}
+nav.start-play_station, a:nth-child(2):hover~.indicator {
+  width: 120px;
+  left: 100px;
+  background-color: var(--ps);
+}
+nav.start-stadia, a:nth-child(3):hover~.indicator {
+  width: 100px;
+  left: 220px;
+  background-color: var(--stadia);
+}
+
+
+
+
+.product-flex {
+  height: 90%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+#xbox-items .card,
+#xbox-items .card-shade,
+#xbox-items .card-shade button  {
+  border: 1px solid var(--xbox);
+}
+#xbox-items #side-l1,
+#xbox-items #side-l2,
+#xbox-items #side-l3,
+#xbox-items #side-r1,
+#xbox-items #side-r2,
+#xbox-items #side-r3,
+#xbox-items #side-arrow-top,
+#xbox-items #side-arrow-bot {
+  background-color: var(--xbox);
+}
+#ps-items .card,
+#ps-items .card-shade,
+#ps-items .card-shade button  {
+  border: 1px solid var(--ps);
+}
+#ps-items #side-l1,
+#ps-items #side-l2,
+#ps-items #side-l3,
+#ps-items #side-r1,
+#ps-items #side-r2,
+#ps-items #side-r3,
+#ps-items #side-arrow-top,
+#ps-items #side-arrow-bot {
+  background-color: var(--ps);
+}
+#stadia-items .card,
+#stadia-items .card-shade,
+#stadia-items .card-shade button  {
+  border: 1px solid var(--stadia);
+}
+#stadia-items #side-l1,
+#stadia-items #side-l2,
+#stadia-items #side-l3,
+#stadia-items #side-r1,
+#stadia-items #side-r2,
+#stadia-items #side-r3,
+#stadia-items #side-arrow-top,
+#stadia-items #side-arrow-bot {
+  background-color: var(--stadia);
+}
 .card {
-  border: green 1px solid;
   height: 500px;
   width: 350px;
   margin: 50px;
@@ -81,14 +223,12 @@ section:nth-child(3) {
   position: relative;
 }
 .card-other {
-  background-color: transparent;
   height: 500px;
   width: 350px;
 
   position: absolute;
 }
 #side-l1 {
-  background-color: green;
   height: 150px;
   width: 10px;
   clip-path: polygon(
@@ -102,7 +242,6 @@ section:nth-child(3) {
   left: -5px;
 }
 #side-l2 {
-  background-color: green;
   height: 30px;
   width: 10px;
   clip-path: polygon(
@@ -116,7 +255,6 @@ section:nth-child(3) {
   left: -5px;
 }
 #side-l3 {
-  background-color: green;
   height: 30px;
   width: 10px;
   clip-path: polygon(
@@ -130,7 +268,6 @@ section:nth-child(3) {
   left: -5px;
 }
 #side-r1 {
-  background-color: green;
   height: 150px;
   width: 10px;
   clip-path: polygon(
@@ -144,7 +281,6 @@ section:nth-child(3) {
   right: -5px;
 }
 #side-r2 {
-  background-color: green;
   height: 30px;
   width: 10px;
   clip-path: polygon(
@@ -158,7 +294,6 @@ section:nth-child(3) {
   right: -5px;
 }
 #side-r3 {
-  background-color: green;
   height: 30px;
   width: 10px;
   clip-path: polygon(
@@ -172,7 +307,6 @@ section:nth-child(3) {
   right: -5px;
 }
 #side-arrow-top {
-  background-color: green;
   height: 30px;
   width: 30px;
   clip-path: polygon(
@@ -185,7 +319,6 @@ section:nth-child(3) {
   right: 0;
 }
 #side-arrow-bot {
-  background-color: green;
   height: 30px;
   width: 30px;
   clip-path: polygon(
@@ -198,9 +331,7 @@ section:nth-child(3) {
   left: 0;
 }
 .card-shade {
-  border: 1px solid #189505;
   background: linear-gradient(135deg, rgba(1,1,1,0.71) 0%, rgba(0,0,0,0.36) 100%);
-  background-blend-mode: normal;
   backdrop-filter: blur(50px);
   height: 480px;
   width: 330px;
@@ -215,7 +346,8 @@ section:nth-child(3) {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-flow: column wrap;
+  flex-flow: column;
+  line-height: 5;
 
   color: white;
 
@@ -224,14 +356,38 @@ section:nth-child(3) {
   left: 10px;
   
 }
+#device{
+}
+#month {
+}
+#price{
+}
 .card-shade button {
   width: 50%;
   height: 8%;
+  border: 1px solid var(--xbox);
+  background-color: transparent;
 }
 
 
+#xbox-items button:hover {
+  box-shadow: 0 0 50px var(--xbox);
+  background-color: var(--xbox);
+  transition: ease .5s;
+}
 
-@media (max-width: 1500px) {
+#ps-items button:hover {
+  box-shadow: 0 0 50px var(--ps);
+  background-color: var(--ps);
+  transition: ease .5s;
+}
+#stadia-items button:hover {
+  box-shadow: 0 0 50px var(--stadia);
+  background-color: var(--stadia);
+  transition: ease .5s;
+}
+
+@media (max-width: 1000px) {
   .products {
     overflow-y: scroll ;
   }
