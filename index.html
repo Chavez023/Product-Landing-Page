@@ -4,251 +4,167 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Product Landing Page</title>
 
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
 </head>
+
 <body>
   <header id="header">
-    <div id="logo">
-      <img src="Web_fils/Lgo.png" id="header-img">
-    </div>
-    <nav id="nav-bar">
-      <a href="#features"class="nav-link">Feature</a>
-      <a href="#videos"nav-link" class="nav-link">Videos</a>
-      <a href="#plans"nav-link" class="nav-link">Plans</a>
-    </nav>
+      <img id="header-img"
+        src="https://th.bing.com/th/id/R.e5a5a4623102be973043cca1b11672f7?rik=eluQ56mt3l0YHg&riu=http%3a%2f%2fassets.stickpng.com%2fthumbs%2f58482958cef1014c0b5e49fa.png&ehk=B01%2fDF4%2bJWVaKciAobnhB6sennDUI4WpdTyi8nxA9hM%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1" 
+        alt=""
+      >
+      <div class="left">
+        <div class="logo">
+          <i 
+            class="fa-brands fa-xbox" 
+            id="xbox">
+          </i>
+          <span>Xbox</span>
+        </div>
+        <div class="profile"></div>
+      </div>
+      
+      <div class="right"> 
+        <nav id="nav-bar">
+          <a 
+            class="nav-link"
+            href="#OV">
+            Overview
+          </a>
+            
+          <a 
+            class="nav-link"
+            href="#fea">
+            Features
+          </a>
+
+          <a 
+            class="nav-link"
+            href="#plans">
+            Plans
+          </a>
+        </nav>
+      </div>
   </header>
+  
 
   <main>
-    <section id="hero">
-      <h2>Send Message</h2>
+    <section id="OV">
+      <h1 class="section-title" id="header">Xbox Game Pass</h1>
+      <div id="r">
+        
+        <div>
+          <p>Play new games on day one. Plus, enjoy hundreds of high-quality games with friends on console, PC, or cloud. With games added all the time, there’s always something new to play.</p>
+          <p>Join now to get your first month for $1.</p>  
+        </div>
+       
+
       <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <h2>Send Message</h2>
         <input name="email" id="email" type="email" placeholder="Enter your email address" required="">
         <input id="submit" type="submit" value="Get Started" class="btn">
       </form>
+      </div>
+      
+    </section>
+  
+  <section id="fea">
+    <div class="blur sec-2A"></div>
+    <h1 class="section-title">PLAY HUNDREDS OF HIGH-QUALITY GAMES</h1>
+    <div class="grid">
+      <div id="box">
+        <i class="fa-sharp fa-solid fa-diamond"></i>
+        <p>Xbox Live Gold included</p>
+      </div>
+      <div id="box">
+        <i class="fa-sharp fa-solid fa-diamond"></i>
+        <p>EA Play membership included</p>
+      </div>
+      <div id="box">
+        <i class="fa-sharp fa-solid fa-diamond"></i>
+        <p>EA Play membership included</p>
+      </div>
+      <div id="box">
+        <i class="fa-sharp fa-solid fa-diamond"></i>
+        <p>Download console and PC games</p>
+      </div>
+      <div id="box">
+        <i class="fa-sharp fa-solid fa-diamond"></i>
+        <p>Free Perks and exclusive member discounts</p>
+      </div>
+      <div id="box">
+        <i class="fa-sharp fa-solid fa-diamond"></i>
+        <p>New games added all the time, including</p>
+      </div>
+    </div>
+    <div class="videos">
+      <iframe 
+        id="video"
+        src="https://www.youtube.com/embed/rOYnwhKwlw8" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+    
+
+  </section>
+
+    <section id="plans">
+      <div class="blur sec-3A"></div>
+      <div class="blur sec-3B"></div>
+      <div class="blur sec-3C"></div>
+      
+      <h1 class="section-title">Choose the plan that's right for you</h1>
+      <div class="flex">
+        <div class="card">
+          <div class="arrow">
+            <div class="shade">
+              <h1 id="device">PC</h1>
+              <p id="duration"> 1 Month</p>
+              <p id="price"> P114.00</p>
+              <button id="buy">Buy</button>
+            </div>
+          </div>
+           
+          
+        </div>
+          
+        <div class="card">
+        <div class="arrow">
+          <div class="shade">
+            <h1 id="device">Console</h1>
+            <p id="duration"> 1 Month</p>
+            <p id="price"> P114.00</p>
+            <button id="buy">Buy</button>
+          </div>
+        </div>
+         
+        
+        </div>
+
+        <div class="card">
+          <div class="arrow">
+            <div class="shade">
+              <h1 id="device">Ultimate</h1>
+              <p id="duration"> 1 Month</p>
+              <p id="price"> P114.00</p>
+              <button id="buy">Buy</button>
+            </div>
+          </div>
+           
+          
+        </div>
+      </div>
     </section>
 
-    <section id="features">
-      <div class="grid">
-        <div class="icon"><i class="fa fa-3x fa-fire"></i></div>
-        <div class="desc">
-          <h2>Game</h2>
-          <p>
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe unde quidem incidunt quod facilis culpa dolorum ex omnis libero modi asperiores id similique reiciendis doloribus, quia sed esse adipisci deserunt?
-          </p>
-        </div>
-      </div>
-      <div class="grid">
-        <div class="icon"><i class="fa fa-3x fa-truck"></i></div>
-        <div class="desc">
-          <h2>Fast Shipping</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe unde quidem incidunt quod facilis culpa dolorum ex omnis libero modi asperiores id similique reiciendis doloribus, quia sed esse adipisci deserunt?
-          </p>
-        </div>
-      </div>
-      <div class="grid">
-        <div class="icon">
-          <i class="fa fa-3x fa-battery-full" aria-hidden="true"></i>
-        </div>
-        <div class="desc">
-          <h2>Quality Assurance</h2>
-          <p>
-            For every purchase you make, we will ensure there are no damages
-            or faults and we will check and test the pitch of your
-            instrument.
-          </p>
-        </div>
-      </div>
-    </section>
-<section id="videos">
-  <div class="border">
-    <iframe 
-      id="video"
-      src="https://www.youtube.com/embed/_x0sBlS-x30" 
-      title="YouTube video player" 
-      frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen>
-    </iframe>
-  </div>
-  <div class="border">
-    <iframe 
-      id="video"
-      src="https://www.youtube.com/embed/JBC0YH8Fkuk" 
-      title="YouTube video player" 
-      frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen>
-    </iframe>
-  </div>
-  <div class="border">
-    <iframe 
-    id="video"
-      src="https://www.youtube.com/embed/d9vM1OYIHUs" 
-      title="YouTube video player" frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen>
-    </iframe>
-  </div>
-  
-  
-</section>
-
-
-
-<section id="plans">
-
-    <nav class="product-category">
-      <a href="#xbox-items" class="product-category-link">Xbox</a>
-      <a href="#ps-items"class="product-category-link">Play station</a>
-      <a href="#stadia-items"class="product-category-link">Stadia</a>
-    <div class="indicator start-all"></div>
-    </nav>
-
-
-
-
-  <div class="product-flex" id="xbox-items">
-    <div class="card">
-      <div class="card-other">
-        <div id="side-l1"></div>
-        <div id="side-l2"></div>
-        <div id="side-l3"></div>
-        <div id="side-r1"></div>
-        <div id="side-r2"></div>
-        <div id="side-r3"></div>
-      </div>
-      <div id="side-arrow-top"></div>
-      <div id="side-arrow-bot"></div>
-      <div class="card-shade">
-        <h1 id="device" >PC</h1>
-        <h2 id="month">1 Months</h2>
-        <p id="price">$0.99</p>
-        <button>Buy</button>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-other">
-        <div id="side-l1"></div>
-        <div id="side-l2"></div>
-        <div id="side-l3"></div>
-        <div id="side-r1"></div>
-        <div id="side-r2"></div>
-        <div id="side-r3"></div>
-      </div>
-      <div id="side-arrow-top"></div>
-      <div id="side-arrow-bot"></div>
-      <div class="card-shade">
-        <h1 id="device" >Console</h1>
-        <h2 id="month">1 Months</h2>
-        <p id="price">$4.99</p>
-        <button>Buy</button>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-other">
-        <div id="side-l1"></div>
-        <div id="side-l2"></div>
-        <div id="side-l3"></div>
-        <div id="side-r1"></div>
-        <div id="side-r2"></div>
-        <div id="side-r3"></div>
-      </div>
-      <div id="side-arrow-top"></div>
-      <div id="side-arrow-bot"></div>
-      <div class="card-shade">
-        <h1 id="device" >Ultimate</h1>
-        <h2 id="month">1 Months</h2>
-        <p id="price">$8.99</p>
-        <button>Buy</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="product-flex" id="ps-items">
-    <div class="card">
-      <div class="card-other">
-        <div id="side-l1"></div>
-        <div id="side-l2"></div>
-        <div id="side-l3"></div>
-        <div id="side-r1"></div>
-        <div id="side-r2"></div>
-        <div id="side-r3"></div>
-      </div>
-      <div id="side-arrow-top"></div>
-      <div id="side-arrow-bot"></div>
-      <div class="card-shade">
-        <h1 id="device" >Premium</h1>
-        <h2 id="month">1 Months</h2>
-        <p id="price">$17.99</p>
-        <button>Buy</button>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-other">
-        <div id="side-l1"></div>
-        <div id="side-l2"></div>
-        <div id="side-l3"></div>
-        <div id="side-r1"></div>
-        <div id="side-r2"></div>
-        <div id="side-r3"></div>
-      </div>
-      <div id="side-arrow-top"></div>
-      <div id="side-arrow-bot"></div>
-      <div class="card-shade">
-        <h1 id="device" >Extra</h1>
-        <h2 id="month">1 Months</h2>
-        <p id="price">$---</p>
-        <button>Buy</button>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-other">
-        <div id="side-l1"></div>
-        <div id="side-l2"></div>
-        <div id="side-l3"></div>
-        <div id="side-r1"></div>
-        <div id="side-r2"></div>
-        <div id="side-r3"></div>
-      </div>
-      <div id="side-arrow-top"></div>
-      <div id="side-arrow-bot"></div>
-      <div class="card-shade">
-        <h1 id="device" >Essential</h1>
-        <h2 id="month">1 Months</h2>
-        <p id="price">$---</p>
-        <button>Buy</button>
-      </div>
-    </div>
-  </div>
-  
-  <div class="product-flex" id="stadia-items">
-    <div class="card">
-      <div class="card-other">
-        <div id="side-l1"></div>
-        <div id="side-l2"></div>
-        <div id="side-l3"></div>
-        <div id="side-r1"></div>
-        <div id="side-r2"></div>
-        <div id="side-r3"></div>
-      </div>
-      <div id="side-arrow-top"></div>
-      <div id="side-arrow-bot"></div>
-      <div class="card-shade">
-        <h1 id="device" >Stadia Pro</h1>
-        <h2 id="month">1 Months</h2>
-        <p id="price">$9.99</p>
-        <button>Buy</button>
-      </div>
-    </div>
-  </div>
-  
-</section>
-
-
-
+    
+  </main>
 
 </body>
 </html>
