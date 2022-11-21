@@ -362,6 +362,9 @@ section:nth-child(3) {
 
     margin: auto;
   }
+  .right a {
+    width: 30vw;
+  }
 
 
   .grid{
